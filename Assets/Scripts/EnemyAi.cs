@@ -30,7 +30,6 @@ public class EnemyAi : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
 
-        // Let NavMeshAgent handle rotation
         navMeshAgent.updateRotation = true;
     }
 

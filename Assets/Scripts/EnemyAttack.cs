@@ -8,14 +8,15 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField]
     private GameObject bulletPrefab;
 
+    [SerializeField]
+    private float fireRate = .5f;
+
     public bool canAttack;
 
     public Transform firePoint;
 
-    [SerializeField]
-    private float fireRate = .5f;
-
     private float timer;
+
     private void Start()
     {
         if(drone == null)

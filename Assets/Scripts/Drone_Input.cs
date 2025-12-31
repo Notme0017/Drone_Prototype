@@ -31,6 +31,7 @@ public class Drone_Input : MonoBehaviour
             rise = 0.0f;
         }
 
+        //------------Audio Logic----------------
         float h = Mathf.Abs(throttle);
         float v = Mathf.Abs(strafe);
         bool isRising = Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.E);
@@ -44,6 +45,8 @@ public class Drone_Input : MonoBehaviour
         {
             droneAudio.PlayIdle();
         }
-            fireMissile = Input.GetKeyDown(KeyCode.Space);
+
+        //------------Missile Firing Logic----------------
+        fireMissile = Input.GetKeyDown(KeyCode.Space);
     }
 }

@@ -34,9 +34,12 @@ public class Drone_Weapons : MonoBehaviour
 
     private void Update()
     {
+        //Constraining the fire rate
         nextFireTime += Time.deltaTime;
         nextFireTime = Mathf.Clamp(nextFireTime, 0f, fireRate + 0.1f);
+
         Debug.DrawRay(lookDirection.transform.position, lookDirection.transform.position, Color.red);
+
         if (input.fireMissile && nextFireTime >= fireRate)
         {
             FireMissile();
@@ -45,6 +48,7 @@ public class Drone_Weapons : MonoBehaviour
     }
 
 
+    //------------Missile Firing Logic----------------
     private void FireMissile()
     {
         if (missileFire != null)

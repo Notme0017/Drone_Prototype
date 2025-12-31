@@ -5,10 +5,10 @@ public class Bullet : MonoBehaviour
     [SerializeField]
     private Drone_Health drone_Health;
 
-    public GameObject target;
-
     [SerializeField]
     private float bulletSpeed = 10.0f;
+
+    public GameObject target;
 
     private Vector3 dir;
 
@@ -24,6 +24,7 @@ public class Bullet : MonoBehaviour
 
     private Vector3 initialPosition;
     private Vector3 currentPosition;
+
     [SerializeField]
     private float damageFallOffFactor = 0.03f;
 

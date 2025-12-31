@@ -8,13 +8,13 @@ public class Drone_Health : MonoBehaviour
     [SerializeField]
     private float maxHealth = 100;
 
-    private float currentHealth;
-
     [SerializeField]
     private RawImage screenFlash;
 
     [SerializeField]
     private Drone_Health_Bar Health_Bar;
+
+    private float currentHealth;
 
     private float alpha;
 
@@ -23,7 +23,9 @@ public class Drone_Health : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
+
         alpha = 0f;
+
         if(screenFlash == null)
         {
             screenFlash = GameObject.Find("ScreenFlash").GetComponent<RawImage>();
